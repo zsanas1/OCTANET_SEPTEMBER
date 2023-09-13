@@ -1,0 +1,188 @@
+/* === Color Variables === */
+:root {
+	--dark: #4b4a42;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #de9f7a;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+	--red: #f66666;
+	--gold: #FFD700;
+	--teal: #008080;
+	--coral: #FF6B6B;
+	--mint: #98FB98;
+	--indigo: #4B0082;
+	--turquoise: #40E0D0;
+	--lavender: #E6E6FA;
+	--mustard: #FFDB58;
+	--emerald: #50C878;
+	--royal-blue: #4169E1;
+	--rose-gold: #B76E79;
+	--sapphire: #082E63;
+	--magenta: #FF00FF;
+	--copper: #B87333;
+	--violet: #8A2BE2;
+	--peach: #FFDAB9;
+	--charcoal: #36454F;
+	--ruby: #E0115F;
+  }
+  
+  /* === Reset Styles for All Elements === */
+  * {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+  }
+  
+  /* === Page Styles === */
+  body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	color: #9f5def;
+	background-color: var(--darker);
+  }
+  
+  /* === Header Styles === */
+  header {
+	padding: 2.5rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center; /* Center-align header contents */
+  }
+  
+  header h1 {
+	font-size: 5.5rem;
+	font-weight: 400;
+	color: var(--peach);
+	margin-bottom: 1.5rem;
+  }
+  
+  /* === Form Styles === */
+  #new-task-form {
+	display: flex;
+	justify-content: center; /* Center-align form elements */
+	margin-top: 2rem; /* Add some space between header and form */
+  }
+  
+  #new-task-input {
+	flex: 1 1 0%;
+	background-color: var(--charcoal);
+	padding: 1rem;
+	border-radius: 1.2rem;
+	margin-right: 1.2rem;
+	color: var(--light);
+	font-size: 2.5rem;
+  }
+  
+  #new-task-input::placeholder {
+	color: var(--grey);
+  }
+  
+  #new-task-submit {
+	color: var(--purple);
+	font-size: 2.25rem;
+	font-weight: 700;
+	background-image: linear-gradient(to right, var(--purple), var(--pink));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	transition: 0.4s;
+  }
+  
+  #new-task-submit:hover {
+	opacity: 0.8;
+  }
+  
+  #new-task-submit:active {
+	opacity: 0.6;
+  }
+  
+  /* === Main Content Styles === */
+  main {
+	flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+  }
+  
+  /* === Task List Styles === */
+  .task-list {
+	padding: 1.5rem;
+	background-color: rgba(255, 255, 255, 0.05); /* Add a subtle background color */
+	border-radius: 1rem; /* Round the corners of the task list */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+  }
+  
+  .task-list h2 {
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: var(--purple);
+	margin-bottom: 1.5rem;
+  }
+  
+  /* === Task Styles === */
+  #tasks .task {
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--darkest);
+	padding: 1.9rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to tasks */
+  }
+  
+  .task .content {
+	flex: 1 1 0%;
+  }
+  
+  .task .content .text {
+	color: var(--indigo);
+	font-size: 1.125rem;
+	width: 100%;
+	display: ruby-base;
+	transition: 0.4s;
+  }
+  
+  .task .content .text:not(:read-only) {
+	color: var(--teal);
+  }
+  
+  .task .actions {
+	display: flex;
+	margin: 0 -0.8rem;
+	align-items: center; /* Center-align action buttons vertically */
+  }
+  
+  .task .actions button {
+	cursor: pointer;
+	margin: 0 1.5rem;
+	font-size: 1.20rem;
+	font-weight: 800;
+	background-image: linear-gradient(to right, var(--dark), var(--purple));
+	text-transform: uppercase;
+	transition: 0.5s;
+	padding: 0.5rem 1rem; /* Add some padding to action buttons */
+	border-radius: 0.5rem; /* Round the corners of action buttons */
+  }
+  
+  .task .actions button:hover {
+	opacity: 0.7;
+  }
+  
+  .task .actions button:active {
+	opacity: 0.7;
+  }
+  
+  .task .actions .edit {
+	background-image: linear-gradient(to right, var(--dark), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  }
+  
+  .task .actions .delete {
+	color: rgb(113, 237, 116);
+  }
+  
